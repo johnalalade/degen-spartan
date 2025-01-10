@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px 100px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Hero */
+.about-hero {
+    min-height: 35vh;
+    background-image: url(/Marble1.png);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-hero-head {
+    padding-left: 100px;
+}
+.about-hero-head h1 {
+    font-family: 'Cinzel';
+    font-weight: 700;
+    font-size: 64px;
+}
+.about-hero-head p {
+    font-size: 18px;
+    margin-top: -20px;
+}
+
+.about-hero .about-img {
+    width: 900px;
+}

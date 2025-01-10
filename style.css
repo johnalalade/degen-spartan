@@ -1,0 +1,485 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #fff;
+    max-width: 100vw;
+    font-family: 'Montserrat';
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px 100px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Hero */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    max-width: 100vw;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.hero-section .head-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.hero-section .head-name {
+    position: absolute;
+    top: -420px;
+    left: 150px;
+}
+
+.hero-section .head-name .name {
+    font-size: 90px;
+    font-family: "Cinzel";
+    height: 45px;
+}
+
+.hero-section .li-img {
+    height: 10px;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.hero-section .image-content .hero-img {
+    height: 550px;
+}
+
+.hero-section .hero-text {
+
+    width: 350px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.l2 {
+    position: absolute;
+    right: 245px;
+    top: -120px;
+}
+
+.l2 .l2-img {
+    height: 120px;
+}
+
+.E-Bg {
+    height: 10px;
+    position: absolute;
+    top: -270px;
+    right: 150px;
+    z-index: -1;
+}
+
+.E-Bg .E1-img {
+    height: 430px;
+}
+
+.hero-text strong {
+    font-family: 'Cinzel';
+}
+
+.hero-text span {
+    display: block;
+}
+
+.hero-text .f1-img {
+    width: 350px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+/* Lore */
+.lore-section {
+    min-height: 100vh;
+    background-image: url(/Marble1.png);
+    padding: 120px 130px;
+}
+
+
+.section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.lore {
+    background-color: #101010;
+    border: 8px solid #4E4E4E;
+    border-radius: 32px;
+    width: 539px;
+    height: 684px;
+    padding: 30px;
+}
+
+.lore-head {
+    font-family: 'Cinzel';
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.lore-text {
+    font-size: 18px;
+}
+
+.lore-sub {
+    color: #CD7F32;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.helmet-img {
+    height: 16px;
+    width: 13.9px;
+}
+
+.learn-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learn-more p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.learn-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 4px;
+    height: 34px;
+    width: 104px;
+}
+
+.lore-img {
+    height: 603px;
+    width: 474px;
+}
+
+.quotes-container {
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    padding: 0px 50px;
+}
+
+.q-img {
+    width: 80px;
+}
+
+.quote-img {
+    position: absolute;
+    top: -40px;
+    left: 200px;
+}
+
+.qoute-head {
+    font-family: 'Cinzel';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.35px;
+    letter-spacing: -0.02em;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quote {
+    border: 1px solid white;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    width: 255px;
+    margin-bottom: 50px;
+}
+
+.quote p {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Portfolio */
+.protfolio {
+    min-height: 50vh;
+    background-image: url(/Marble1.png);
+    padding: 120px 130px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.protfolio-head p {
+    font-family: 'Cinzel';
+    font-size: 32px;
+    font-weight: 700;
+    width: 400px;
+}
+
+.address-container {
+    background: #1A1A1A;
+    width: 500px;
+    height: 374px;
+    border-radius: 32px;
+    padding: 5px 60px;
+}
+
+.address-container .address-head {
+    font-family: 'Cinzel';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #CD7F32;
+}
+
+.wallets {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+.wallets .wallet-name {
+    color: #00FFFF;
+    width: 204px;
+}
+
+.wallets .wallet-address {
+    text-decoration: underline;
+    width: 247px;
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.highlight-container {
+    background: #1A1A1A;
+    width: 500px;
+    height: 530px;
+    border-radius: 32px;
+    padding: 5px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.highlight-head {
+    color: #CD7F32;
+    font-family: 'Cinzel';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.highlight-sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.highlight-1 {
+    border: 1px solid white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+}
+
+.sol {
+    font-weight: 700;
+}
+
+.sol-bal {
+    color: #00FFFF;
+}
+
+.sol-bal sub {
+    color: #FFFFFF;
+    font-size: 8px;
+}
+
+.sol-details {
+    font-size: 12px;
+    margin-top: -12px;
+}
+
+
+.highlight-2 {
+    border: 1px solid white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.base {
+    font-weight: 700;
+}
+
+.base-bal {
+    color: #00FFFF;
+    margin-top: -1px;
+}
+
+.base-bal sub {
+    color: #FFFFFF;
+    font-size: 8px;
+}
+
+.base-bal span {
+    color: #FFFFFF;
+    font-size: 8px;
+}
+
+.nfts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid white;
+    border-radius: 32px;
+    padding: 5px 20px;
+    padding-bottom: +20px;
+}
+
+.nfts .nft-list {
+    display: flex;
+}
+
+.nfts .nft {
+    width: 80px;
+    padding-right: 4px;
+    border-radius: 10px;
+}
+.nfts .nft-box {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #CD7F32;
+    padding: 5px 100px;
+}
+
+.footer p {
+    font-family: 'Cinzel';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.26px;
+    text-align: left;
+}
+
+.footer .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer .nav-links li {
+    margin: 0 15px;
+}
+
+.footer .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer .nav-links a:hover {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .footer .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .footer .nav-links.active {
+        display: flex;
+    }
+}
