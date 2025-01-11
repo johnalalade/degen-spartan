@@ -30,6 +30,15 @@ body {
     margin: 0 15px;
 }
 
+.links {
+    width: 24px;
+}
+
+.vr {
+    border-left: 1px solid #CD7F32;
+    padding-left: 16px;
+}
+
 .navbar .nav-links a {
     color: white;
     text-decoration: none;
@@ -42,10 +51,10 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar .nav-links {
+    /* .navbar .nav-links {
         flex-direction: column;
         display: none;
-    }
+    } */
 
     .navbar .nav-links.active {
         display: flex;
@@ -75,7 +84,7 @@ body {
 
 .hero-section .head-name {
     position: absolute;
-    top: -420px;
+    top: -310px;
     left: 150px;
 }
 
@@ -87,6 +96,25 @@ body {
 
 .hero-section .li-img {
     height: 10px;
+}
+
+.play-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+    width: 70px;
+}
+
+.play-button p {
+    font-size: 13px;
+}
+
+.play-plate {
+    width: 70px;
 }
 
 .image-content {
@@ -273,6 +301,10 @@ body {
     text-align: center;
 }
 
+.q-navigations {
+    display: none;
+}
+
 /* Portfolio */
 .protfolio {
     min-height: 50vh;
@@ -428,6 +460,7 @@ body {
     padding-right: 4px;
     border-radius: 10px;
 }
+
 .nfts .nft-box {
     border: 1px solid black;
     border-radius: 10px;
@@ -473,13 +506,583 @@ body {
     color: #00bcd4;
 }
 
+.vr-foot {
+    border-left: 1px solid white;
+    padding-left: 16px;
+}
+
 @media (max-width: 768px) {
-    .footer .nav-links {
+    /* .footer .nav-links {
         flex-direction: column;
         display: none;
-    }
+    } */
 
     .footer .nav-links.active {
         display: flex;
     }
+}
+
+
+#vid-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding-left: 20px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000000;
+        padding: 5px 10px;
+    }
+
+    .navbar .logo {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .navbar .nav-links li {
+        margin: 0 8px;
+    }
+
+    .links {
+        width: 23px;
+    }
+
+    .vr {
+        border-left: 1px solid #CD7F32;
+        padding-left: 16px;
+    }
+
+    .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+        color: #00bcd4;
+    }
+
+
+
+    /* Hero */
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+
+    .hero-section .head-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        position: relative;
+    }
+
+    .hero-section .head-name {
+        position: absolute;
+        top: -10px;
+        left: -170px;
+    }
+
+    .hero-section .head-name .name {
+        font-size: 25px;
+        font-family: "Cinzel";
+        height: 45px;
+    }
+
+    .hero-section .head-name .n1 {
+        margin-bottom: -30px;
+    }
+
+    .hero-section .l1-img {
+        height: 10px;
+        display: none;
+    }
+
+    .play-button {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .play-text {
+        position: absolute;
+        top: 95px;
+        left: -30px;
+    }
+
+    .play-button {
+        width: 45px;
+        position: absolute;
+        top: 85px;
+        left: -90px;
+    }
+
+    .play-button p {
+        font-size: 10px;
+    }
+
+    .play-plate {
+        width: 70px;
+        display: none;
+    }
+
+
+    .image-content {
+        flex: 1;
+    }
+
+    .hero-section .image-content .hero-img {
+        height: 500px;
+        width: 450px;
+    }
+
+    .hero-section .hero-text {
+
+        width: 350px;
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .l2 {
+        display: none;
+        position: absolute;
+        right: 245px;
+        top: -120px;
+    }
+
+    .l2 .l2-img {
+        height: 120px;
+    }
+
+    .E-Bg {
+        height: 10px;
+        /* position: absolute; */
+        top: -760px;
+        left: 120px;
+        z-index: -1;
+    }
+
+    .E-Bg .E1-img {
+        height: 430px;
+    }
+
+    .hero-text strong {
+        font-family: 'Cinzel';
+        text-align: start;
+    }
+
+    .hero-text span {
+        display: block;
+        font-size: 13px;
+        text-align: start;
+    }
+
+    .ds-title {
+        margin-top: 20px;
+    }
+
+    hr {
+        width: 290px;
+    }
+
+    .hero-text .f1-img {
+        width: 250px;
+        align-self: center;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+        font-weight: lighter;
+        margin-bottom: 50px;
+    }
+
+    /* Lore */
+    .lore-section {
+        min-height: 100vh;
+        background-image: url(/Marble1.png);
+        padding: 120px 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .lore {
+        background-color: #101010;
+        border: 8px solid #4E4E4E;
+        border-radius: 32px;
+        width: 319px;
+        height: 584px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .lore-head {
+        font-family: 'Cinzel';
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .lore-text {
+        font-size: 13px;
+    }
+
+    .lore-sub {
+        color: #CD7F32;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .helmet-img {
+        height: 16px;
+        width: 13.9px;
+    }
+
+    .learn-more {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .learn-more p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .learn-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFFFF;
+        color: #000000;
+        font-weight: 800;
+        padding: 2px 8px;
+        border-radius: 4px;
+        height: 20px;
+        width: 90px;
+    }
+
+    .lore-img {
+        height: 350px;
+        width: 274px;
+    }
+
+    .quotes-container {
+        position: relative;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+        backdrop-filter: blur(32px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 24px;
+        padding: 0px 20px;
+        width: 300px;
+    }
+
+    .q-img {
+        width: 45px;
+    }
+
+    .quote-img {
+        position: absolute;
+        top: -20px;
+        left: 15px;
+    }
+
+    .qoute-head {
+        font-family: 'Cinzel';
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32.35px;
+        letter-spacing: -0.02em;
+    }
+
+    .quotes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .quote {
+        border: 1px solid white;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 30px;
+        width: 255px;
+        margin-bottom: 50px;
+    }
+
+    .quote p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .q-navigations {
+        display: block;
+    }
+
+    /* Portfolio */
+    .protfolio {
+        min-height: 50vh;
+        background-image: url(/Marble1.png);
+        /* padding: 120px 130px; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .protfolio-head p {
+        font-family: 'Cinzel';
+        font-size: 24px;
+        font-weight: 700;
+        width: 300px;
+    }
+
+    .address-container {
+        background: #1A1A1A;
+        width: 300px;
+        height: 274px;
+        border-radius: 32px;
+        padding: 5px 20px;
+    }
+
+    .address-container .address-head {
+        font-family: 'Cinzel';
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        color: #CD7F32;
+    }
+
+    .address-container p {
+        font-size: 14px;
+    }
+
+    .wallets {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+    }
+
+    .wallets .wallet-name {
+        color: #00FFFF;
+        width: 204px;
+        font-size: 12px;
+    }
+
+    .wallets .wallet-address {
+        text-decoration: underline;
+        width: 160px;
+        text-align: start;
+        word-wrap: break-word;
+        font-size: 12px;
+    }
+
+    .highlight-container {
+        background: #1A1A1A;
+        width: 300px;
+        height: 390px;
+        border-radius: 32px;
+        padding: 5px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .highlight-head {
+        color: #CD7F32;
+        font-family: 'Cinzel';
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .live {
+        font-size: 13px;
+    }
+
+    .highlight-sections {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -50px;
+    }
+
+    .highlight-1 {
+        border: 1px solid white;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 5px;
+    }
+
+    .sol {
+        font-weight: 700;
+    }
+
+    .sol-bal {
+        color: #00FFFF;
+        font-size: 12px;
+    }
+
+    .sol-bal sub {
+        color: #FFFFFF;
+        font-size: 8px;
+    }
+
+    .sol-details {
+        font-size: 10px;
+        margin-top: -12px;
+    }
+
+
+    .highlight-2 {
+        border: 1px solid white;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    .base {
+        font-weight: 700;
+    }
+
+    .base-bal {
+        color: #00FFFF;
+        margin-top: -1px;
+        font-size: 12px;
+    }
+
+    .base-bal sub {
+        color: #FFFFFF;
+        font-size: 8px;
+    }
+
+    .base-bal span {
+        color: #FFFFFF;
+        font-size: 8px;
+    }
+
+    .nfts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        border: 1px solid white;
+        border-radius: 32px;
+        padding: 5px 20px;
+        padding-bottom: +20px;
+        margin-top: -20px;
+    }
+
+    .nfts .nft-list {
+        display: flex;
+    }
+
+    .nfts .nft {
+        width: 45px;
+        padding-right: 4px;
+        border-radius: 10px;
+    }
+
+    .nfts .nft-box {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-right: 4px;
+    }
+
+
+    /* Footer */
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #CD7F32;
+        padding: 1px 20px;
+    }
+
+    .footer p {
+        font-family: 'Cinzel';
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 12.26px;
+        text-align: left;
+    }
+
+    .footer .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .footer .nav-links li {
+        margin: 0 6px;
+    }
+
+    .footer .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        transition: color 0.3s ease;
+    }
+
+    .footer .nav-links a:hover {
+        color: #00bcd4;
+    }
+
+    .vr-foot {
+        border-left: 1px solid white;
+        padding-left: 16px;
+    }
+
+
 }
