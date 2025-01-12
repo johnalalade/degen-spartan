@@ -143,8 +143,9 @@ body {
 
 .vison-board {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: start;
+    overflow: hidden;
 }
 
 .wh-qu {
@@ -419,7 +420,7 @@ body {
     }
 
     .about-hero .about-img {
-        width: 520px;
+        width: 495px;
     }
 
     /* Legend */
@@ -511,6 +512,7 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        transition: transform 0.3s ease;
     }
 
     .wh-qu .why {

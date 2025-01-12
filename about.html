@@ -69,7 +69,7 @@
 
     <section class="vision-contributor">
 
-        <div class="vison-board">
+        <div class="vison-board" id="vision-board">
             <div class="wh-qu">
                 <div class="why">
                     <p class="why-head">Why Spartan?</p>
@@ -205,5 +205,54 @@
     </div>
 
 </body>
+
+<script>
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const scrollContent = document.getElementById("vision-board");
+    const scrollAmount = 220; // Amount to scroll in pixels
+
+    function scrollHorizontally(direction) {
+        const currentScroll = scrollContent.scrollLeft;
+        scrollContent.scrollBy({
+            left: direction * scrollAmount,
+            behavior: "smooth", // Smooth scrolling effect
+        });
+    }
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight') scrollHorizontally(1)
+        if (event.key === 'ArrowLeft') scrollHorizontally(-1)
+    })
+
+    scrollContent.addEventListener("mousedown", (e) => {
+        isDown = true;
+        scrollContent.classList.add("active");
+        startX = e.pageX - scrollContent.offsetLeft;
+        scrollLeft = scrollContent.scrollLeft;
+    });
+
+    scrollContent.addEventListener("mouseleave", () => {
+        isDown = false;
+        scrollContent.classList.remove("active");
+    });
+
+    scrollContent.addEventListener("mouseup", () => {
+        isDown = false;
+        scrollContent.classList.remove("active");
+    });
+
+    scrollContent.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContent.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scroll speed
+        scrollContent.scrollLeft = scrollLeft - walk;
+    });
+
+</script>
 
 </html>
