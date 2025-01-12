@@ -236,33 +236,130 @@ m2.onclick = function () {
 }
 
 
-vertical.onclick = function () {
-    if (activeScene === scene) {
-        model.rotation.x -= 0.1;
-    } else {
-        model2.rotation.x -= 0.1;
-    }
-}
-horizontal.onclick = function () {
-    if (activeScene === scene) {
-        model.rotation.y -= 0.1;
-    } else {
-        model2.rotation.y -= 0.1;
-    }
-}
+// vertical.onclick = function () {
+//     if (activeScene === scene) {
+//         model.rotation.x -= 0.1;
+//     } else {
+//         model2.rotation.x -= 0.1;
+//     }
+// }
+let verticalIntervalId;
+vertical.addEventListener("mousedown", () => {
+    verticalIntervalId = setInterval(function () {
+        if (activeScene === scene) {
+            model.rotation.x -= 0.1;
+        } else {
+            model2.rotation.x -= 0.1;
+        }
+    }, 50); // Increment every 500ms
+});
+vertical.addEventListener("mouseup", () => {
+    clearInterval(verticalIntervalId);
+});
+vertical.addEventListener("mouseleave", () => {
+    clearInterval(verticalIntervalId);
+});
+vertical.addEventListener("touchstart", () => {
+    verticalIntervalId = setInterval(function () {
+        if (activeScene === scene) {
+            model.rotation.x -= 0.1;
+        } else {
+            model2.rotation.x -= 0.1;
+        }
+    }, 50); // Increment every 500ms
+});
+
+// horizontal.onclick = function () {
+//     if (activeScene === scene) {
+//         model.rotation.y -= 0.1;
+//     } else {
+//         model2.rotation.y -= 0.1;
+//     }
+// }
+
+let horizontalIntervalId;
+horizontal.addEventListener("mousedown", () => {
+    horizontalIntervalId = setInterval(function () {
+        if (activeScene === scene) {
+            model.rotation.y -= 0.1;
+        } else {
+            model2.rotation.y -= 0.1;
+        }
+    }, 50); // Increment every 500ms
+});
+horizontal.addEventListener("mouseup", () => {
+    clearInterval(horizontalIntervalId);
+});
+horizontal.addEventListener("mouseleave", () => {
+    clearInterval(horizontalIntervalId);
+});
+horizontal.addEventListener("touchstart", () => {
+    horizontalIntervalId = setInterval(function () {
+        if (activeScene === scene) {
+            model.rotation.y -= 0.1;
+        } else {
+            model2.rotation.y -= 0.1;
+        }
+    }, 50); // Increment every 500ms
+});
 
 
 let fovSpeed = 1;
 
-zoomIn.onclick = function () {
-    camera.position.z -= zoomSpeed;
-    camera.fov = Math.max(10, camera.fov - fovSpeed) // Reduce FOV for more zoom effect
-}
+// zoomIn.onclick = function () {
+//     camera.position.z -= zoomSpeed;
+//     camera.fov = Math.max(10, camera.fov - fovSpeed) // Reduce FOV for more zoom effect
+// }
+let zoomInIntervalId;
+zoomIn.addEventListener("mousedown", () => {
+    zoomInIntervalId = setInterval(function () {
+        camera.position.z -= zoomSpeed;
+        camera.fov = Math.max(10, camera.fov - fovSpeed) // Reduce FOV for more zoom effect
+    }, 50); // Increment every 100ms
+});
 
-zoomOut.onclick = function () {
-    camera.position.z += zoomSpeed;
-    camera.fov = Math.min(75, camera.fov + fovSpeed); // Increase FOV for less zoom effect
-}
+zoomIn.addEventListener("mouseup", () => {
+    clearInterval(zoomInIntervalId);
+});
+zoomIn.addEventListener("mouseleave", () => {
+    clearInterval(zoomInIntervalId);
+});
+
+zoomIn.addEventListener("touchstart", () => {
+    zoomInIntervalId = setInterval(function () {
+        camera.position.z -= zoomSpeed;
+        camera.fov = Math.max(10, camera.fov - fovSpeed) // Reduce FOV for more zoom effect
+    }, 50); // Increment every 100ms
+});
+
+
+// zoomOut.onclick = function () {
+//     camera.position.z += zoomSpeed;
+//     camera.fov = Math.min(75, camera.fov + fovSpeed); // Increase FOV for less zoom effect
+// }
+
+let zoomOutIntervalId;
+
+zoomOut.addEventListener("mousedown", () => {
+    zoomOutIntervalId = setInterval(function () {
+        camera.position.z += zoomSpeed;
+        camera.fov = Math.max(10, camera.fov + fovSpeed) // Reduce FOV for more zoom effect
+    }, 50); // Increment every 100ms
+});
+
+zoomOut.addEventListener("mouseup", () => {
+    clearInterval(zoomOutIntervalId);
+});
+zoomOut.addEventListener("mouseleave", () => {
+    clearInterval(zoomOutIntervalId);
+});
+
+zoomOut.addEventListener("touchstart", () => {
+    zoomOutIntervalId = setInterval(function () {
+        camera.position.z += zoomSpeed;
+        camera.fov = Math.max(10, camera.fov + fovSpeed) // Reduce FOV for more zoom effect
+    }, 50); // Increment every 100ms
+});
 
 window.addEventListener('keydown', (event) => {
     if (event.key === 's') {
