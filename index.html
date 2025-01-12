@@ -122,8 +122,31 @@
 
             </div>
 
-            <div class="lore-img-class">
+            <div class="lore-img-class" id="s1">
                 <img src="slide1.png" alt="Degen Spartan" class="lore-img">
+                <div class="slide-dots">
+                    <div class="active-slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                </div>
+            </div>
+
+            <div class="lore-img-class" id="s2">
+                <img src="slide2.png" alt="Degen Spartan" class="lore-img">
+                <div class="slide-dots">
+                    <div class="slide-dot"></div>
+                    <div class="active-slide-dot"></div>
+                    <div class="slide-dot"></div>
+                </div>
+            </div>
+
+            <div class="lore-img-class" id="s3">
+                <img src="slide3.png" alt="Degen Spartan" class="lore-img">
+                <div class="slide-dots">
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="active-slide-dot"></div>
+                </div>
             </div>
 
         </div>
@@ -137,35 +160,74 @@
 
             <div class="quotes">
 
-                <div class="quote">
+                <div class="quote" id="q0">
                     <p>
                         "True strength comes not from wealth but from understanding risk and reward."
                     </p>
                 </div>
 
-                <!-- <div class="quote">
+                <div class="quote" id="q1">
                     <p>
                         “In the trenches of DeFi, fortune favors the bold degens."
                     </p>
                 </div>
 
-                <div class="quote">
+                <div class="quote" id="q2">
                     <p>
                         “Only the disciplined can conquer chaos —be it in Sparta or in the markets."
                     </p>
-                </div> -->
+                </div>
 
             </div>
+            <div class="q-nav-container">
+                <div class="q-navigations" id="b0">
+                    <img src="inactive-left.png" alt="Degen Spartan" class="q-nav" onclick="removeQuote()">
+                    <img src="active-right.png" alt="Degen Spartan" class="q-nav" onclick="addQuote()">
+                </div>
+
+
+                <div class="q-navigations" id="b1">
+                    <img src="active-left.png" alt="Degen Spartan" class="q-nav" onclick="removeQuote()">
+                    <img src="active-right.png" alt="Degen Spartan" class="q-nav" onclick="addQuote()">
+                </div>
+
+                <div class="q-navigations" id="b2">
+                    <img src="active-left.png" alt="Degen Spartan" class="q-nav" onclick="removeQuote()">
+                    <img src="inactive-right.png" alt="Degen Spartan" class="q-nav" onclick="addQuote()">
+                </div>
+            </div>
+
         </div>
 
     </section>
 
-    <section>
+    <div class="model-section-div">
+        <section id="model-section">
+            <div class="model-header">
+                <p class="model-head">3D model of the DegenSpartan</p>
+            </div>
 
-    </section>
+            <p id="model-sub">Traditional Degen Spartan</p>
 
+            <div class="model-menu">
+                <div class="model-move">
+                    <img src="vertical.png" alt="Degen Spartan" class="action-btn" id="vertical">
+                    <img src="horizontal.png" alt="Degen Spartan" class="action-btn" id="horizontal">
+                </div>
 
-    <!-- <script type="module" src="/main.js"></script> -->
+                <div class="model-zoom">
+                    <img src="in.png" alt="Degen Spartan" class="action-btn" id="in">
+                    <img src="out.png" alt="Degen Spartan" class="action-btn" id="out">
+                </div>
+
+                <div class="models-selector">
+                    <img src="m1.JPG" alt="Degen Spartan" class="model active" id="m1">
+                    <img src="m2.JPG" alt="Degen Spartan" class="model inactive" id="m2">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="/main.js"></script>
 
     <div class="protfolio">
 
@@ -248,6 +310,7 @@
         </ul>
 
     </div>
+
 </body>
 
 <div id="vid-container" onclick="pauseVideo()">
@@ -260,6 +323,21 @@
 
     const video = document.getElementById('myVideo');
     const videoContainer = document.getElementById('vid-container');
+
+    const b0 = document.getElementById('b0');
+    const b1 = document.getElementById('b1');
+    const b2 = document.getElementById('b2');
+
+    const q0 = document.getElementById('q0');
+    const q1 = document.getElementById('q1');
+    const q2 = document.getElementById('q2');
+
+
+    const s1 = document.getElementById('s1');
+    const s2 = document.getElementById('s2');
+    const s3 = document.getElementById('s3');
+
+    const qNavs = document.getElementsByClassName('q-navigations')
 
     function playVideo() {
 
@@ -284,6 +362,103 @@
         videoContainer.style.display = 'none'
     }
 
+    let activeQuote = 0
+
+    b1.style.display = 'none'
+    b2.style.display = 'none'
+
+
+    function addQuote() {
+        if (activeQuote === 2) return
+        let newQ = activeQuote += 1
+        if (newQ === 0) {
+            b0.style.display = 'block'
+            b1.style.display = 'none'
+            b2.style.display = 'none'
+
+            q0.style.display = 'block'
+            q1.style.display = 'none'
+            q2.style.display = 'none'
+        }
+        if (newQ === 1) {
+            b0.style.display = 'none'
+            b1.style.display = 'block'
+            b2.style.display = 'none'
+
+            q0.style.display = 'none'
+            q1.style.display = 'block'
+            q2.style.display = 'none'
+        }
+        if (newQ === 2) {
+            b0.style.display = 'none'
+            b1.style.display = 'none'
+            b2.style.display = 'block'
+
+            q0.style.display = 'none'
+            q1.style.display = 'none'
+            q2.style.display = 'block'
+        }
+
+
+    }
+
+    function removeQuote() {
+        if (activeQuote === 0) return
+        let newQ = activeQuote -= 1
+        if (newQ === 0) {
+            b0.style.display = 'block'
+            b1.style.display = 'none'
+            b2.style.display = 'none'
+
+            q0.style.display = 'block'
+            q1.style.display = 'none'
+            q2.style.display = 'none'
+        }
+        if (newQ === 1) {
+            b0.style.display = 'none'
+            b1.style.display = 'block'
+            b2.style.display = 'none'
+
+            q0.style.display = 'none'
+            q1.style.display = 'block'
+            q2.style.display = 'none'
+        }
+        if (newQ === 2) {
+            b0.style.display = 'none'
+            b1.style.display = 'none'
+            b2.style.display = 'block'
+
+            q0.style.display = 'none'
+            q1.style.display = 'none'
+            q2.style.display = 'block'
+        }
+
+    }
+
+    let s_num = 1
+    setInterval(() => {
+
+        if (s_num !== 3) {
+            let num = s_num += 1
+            if (num === 1) {
+                s1.style.display = "flex"
+                s2.style.display = "none"
+                s3.style.display = "none"
+            }
+            if (num === 2) {
+                s1.style.display = "none"
+                s2.style.display = "flex"
+                s3.style.display = "none"
+            }
+            if (num === 3) {
+                s1.style.display = "none"
+                s2.style.display = "none"
+                s3.style.display = "flex"
+                s_num = 0
+            }
+        }
+
+    }, 2000)
 </script>
 
 </html>
