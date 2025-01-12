@@ -268,6 +268,9 @@ vertical.addEventListener("touchstart", () => {
         }
     }, 50); // Increment every 500ms
 });
+vertical.addEventListener("touchend", () => {
+    clearInterval(verticalIntervalId);
+});
 
 // horizontal.onclick = function () {
 //     if (activeScene === scene) {
@@ -303,6 +306,10 @@ horizontal.addEventListener("touchstart", () => {
     }, 50); // Increment every 500ms
 });
 
+horizontal.addEventListener("touchend", () => {
+    clearInterval(horizontalIntervalId);
+});
+
 
 let fovSpeed = 1;
 
@@ -332,6 +339,10 @@ zoomIn.addEventListener("touchstart", () => {
     }, 50); // Increment every 100ms
 });
 
+zoomIn.addEventListener("touchend", () => {
+    clearInterval(zoomInIntervalId);
+});
+
 
 // zoomOut.onclick = function () {
 //     camera.position.z += zoomSpeed;
@@ -359,6 +370,10 @@ zoomOut.addEventListener("touchstart", () => {
         camera.position.z += zoomSpeed;
         camera.fov = Math.max(10, camera.fov + fovSpeed) // Reduce FOV for more zoom effect
     }, 50); // Increment every 100ms
+});
+
+zoomOut.addEventListener("touchend", () => {
+    clearInterval(zoomOutIntervalId);
 });
 
 window.addEventListener('keydown', (event) => {
