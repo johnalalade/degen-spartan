@@ -271,6 +271,9 @@ vertical.addEventListener("touchstart", () => {
 vertical.addEventListener("touchend", () => {
     clearInterval(verticalIntervalId);
 });
+vertical.addEventListener("touchcancel", () => {
+    clearInterval(verticalIntervalId);
+});
 
 // horizontal.onclick = function () {
 //     if (activeScene === scene) {
@@ -309,7 +312,9 @@ horizontal.addEventListener("touchstart", () => {
 horizontal.addEventListener("touchend", () => {
     clearInterval(horizontalIntervalId);
 });
-
+horizontal.addEventListener("touchcancel", () => {
+    clearInterval(horizontalIntervalId);
+});
 
 let fovSpeed = 1;
 
@@ -340,6 +345,9 @@ zoomIn.addEventListener("touchstart", () => {
 });
 
 zoomIn.addEventListener("touchend", () => {
+    clearInterval(zoomInIntervalId);
+});
+zoomIn.addEventListener("touchcancel", () => {
     clearInterval(zoomInIntervalId);
 });
 
@@ -373,6 +381,10 @@ zoomOut.addEventListener("touchstart", () => {
 });
 
 zoomOut.addEventListener("touchend", () => {
+    clearInterval(zoomOutIntervalId);
+});
+
+zoomOut.addEventListener("touchcancel", () => {
     clearInterval(zoomOutIntervalId);
 });
 
