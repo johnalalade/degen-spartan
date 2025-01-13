@@ -244,13 +244,13 @@
 
                 <div class="wallets">
                     <p class="wallet-name">Solana Wallet Address:</p>
-                    <p class="wallet-address">DS_Wallet_Solana: ABC123DEF456GHI789JKL012MNO345PQRS678TUV9XYZ
+                    <p class="wallet-address">DS_Wallet_Solana: Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump
                     </p>
                 </div>
 
                 <div class="wallets">
                     <p class="wallet-name">Base Wallet Address:</p>
-                    <p class="wallet-address">DS_Wallet_Base: 0x1234ABCD5678EFGH9012IJKL3456MNOP7890QRSTUVWX</p>
+                    <p class="wallet-address">DS_Wallet_Base: Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump</p>
                 </div>
             </div>
 
@@ -266,15 +266,15 @@
                 <div class="highlight-1">
                     <p class="sol">Solana (SOL):</p>
 
-                    <p class="sol-bal">3,456<sub>SOL</sub></p>
+                    <p class="sol-bal" id="sol-bal">...<sub>SOL</sub></p>
                     <p class="sol-details">staked on DeFi protocols</p>
                 </div>
 
                 <div class="highlight-2">
                     <p class="base">Base:</p>
-                    <p class="base-bal">12<sub>ETH</sub> <span> staked in Lido</span></p>
+                    <p class="base-bal" id="base-bal">...<sub>ETH</sub> <span> staked in Lido</span></p>
 
-                    <p class="base-bal">5000<sub>USDC</sub> <span> in yield farming</span></p>
+                    <p class="base-bal" id="usdc-bal">...<sub>USDC</sub> <span> in yield farming</span></p>
                 </div>
             </div>
 
@@ -338,6 +338,10 @@
     const s1 = document.getElementById('s1');
     const s2 = document.getElementById('s2');
     const s3 = document.getElementById('s3');
+
+    const baseBal = document.getElementById('base-bal');
+    const usdcBal = document.getElementById('usdc-bal');
+    const solBal = document.getElementById('sol-bal');
 
     const qNavs = document.getElementsByClassName('q-navigations')
 
@@ -462,9 +466,32 @@
 
     }, 2000)
 
-    function openAbout (){
+    function openAbout() {
         window.location = '/about'
     }
+
+
+    async function fetchData() {
+        const response = await fetch('https://api.coingecko.com/api/v3/coins/degenai/contract/Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump')
+
+        const sol_response = await fetch('https://api.coingecko.com/api/v3/coins/solana')
+
+        if (!response.ok) {
+
+        }
+
+        const data = await response.json(); // Parse JSON response
+        const sol_data = await sol_response.json(); // Parse JSON response
+
+        baseBal.innerHTML = `${data.market_data.current_price.eth}<sub>ETH</sub> <span> staked in Lido</span>`
+        usdcBal.innerHTML = `${data.market_data.current_price.usd}<sub>USDC</sub> <span> in yield farming</span>`
+        solBal.innerHTML = `${sol_data.market_data.current_price.usd / data.market_data.current_price.usd}<sub>SOL</sub>`
+
+        console.log(data)
+    }
+
+    fetchData()
+
 </script>
 
 </html>
