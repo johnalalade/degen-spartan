@@ -253,6 +253,32 @@
         scrollContent.scrollLeft = scrollLeft - walk;
     });
 
+
+    scrollContent.addEventListener("touchstart", (e) => {
+        isDown = true;
+        scrollContent.classList.add("active");
+        startX = e.pageX - scrollContent.offsetLeft;
+        scrollLeft = scrollContent.scrollLeft;
+    });
+
+    scrollContent.addEventListener("touchend", () => {
+        isDown = false;
+        scrollContent.classList.remove("active");
+    });
+
+    scrollContent.addEventListener("touchcancel", () => {
+        isDown = false;
+        scrollContent.classList.remove("active");
+    });
+
+    scrollContent.addEventListener("touchmove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContent.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scroll speed
+        scrollContent.scrollLeft = scrollLeft - walk;
+    });
+
 </script>
 
 </html>

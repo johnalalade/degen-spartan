@@ -210,7 +210,7 @@ window.addEventListener('keydown', (event) => {
 let zoomSpeed = 0.4;
 
 
-let activeScene = scene;
+let activeScene = scene2;
 
 function switchScene() {
     activeScene = activeScene === scene ? scene2 : scene;

@@ -420,7 +420,7 @@ body {
     }
 
     .about-hero .about-img {
-        width: 495px;
+        width: 400px;
     }
 
     /* Legend */
@@ -449,7 +449,7 @@ body {
     }
 
     .legend .legend-img {
-        width: 450px;
+        width: 400px;
     }
 
     .legend .legend-about {
@@ -641,7 +641,7 @@ body {
         text-align: start;
         font-size: 18px;
         font-weight: lighter;
-        width: 450px;
+        width: 400px;
         margin-top: -20px;
     }
 
