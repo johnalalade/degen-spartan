@@ -847,13 +847,13 @@ body {
         height: 10px;
         /* position: absolute; */
         top: -500px;
-        left: 225px;
+        left: 150px;
         z-index: -1;
     }
 
     .E-Bg .E1-img {
         height: 250px;
-        width: 150px;
+        width: 225px;
     }
 
     .hero-text strong {
