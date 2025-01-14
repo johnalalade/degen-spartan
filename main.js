@@ -196,70 +196,70 @@ window.addEventListener('mousemove', (event) => {
 });
 
 
-window.addEventListener('touchstart', (event) => {
-    isDragging = true;
-    // previousMousePosition.x = event.clientX;
-    // previousMousePosition.y = event.clientY;
+// window.addEventListener('touchstart', (event) => {
+//     isDragging = true;
+//     // previousMousePosition.x = event.clientX;
+//     // previousMousePosition.y = event.clientY;
 
-    raycaster.setFromCamera(mouse, camera);
+//     raycaster.setFromCamera(mouse, camera);
 
-    // Check if the mouse is over the model
-    if (model) {
-        const intersects = raycaster.intersectObject(model, true);
-        if (intersects.length > 0) {
-            isDragging = true;
-            previousMousePosition = { x: event.clientX, y: event.clientY };
-        }
-    }
+//     // Check if the mouse is over the model
+//     if (model) {
+//         const intersects = raycaster.intersectObject(model, true);
+//         if (intersects.length > 0) {
+//             isDragging = true;
+//             previousMousePosition = { x: event.clientX, y: event.clientY };
+//         }
+//     }
 
-    if (model2) {
-        const intersects = raycaster.intersectObject(model2, true);
-        if (intersects.length > 0) {
-            isDragging = true;
-            previousMousePosition = { x: event.clientX, y: event.clientY };
-        }
-    }
-});
+//     if (model2) {
+//         const intersects = raycaster.intersectObject(model2, true);
+//         if (intersects.length > 0) {
+//             isDragging = true;
+//             previousMousePosition = { x: event.clientX, y: event.clientY };
+//         }
+//     }
+// });
 
-window.addEventListener('touchend', () => {
-    isDragging = false;
-});
+// window.addEventListener('touchend', () => {
+//     isDragging = false;
+// });
 
-window.addEventListener('touchcancel', () => {
-    isDragging = false;
-});
+// window.addEventListener('touchcancel', () => {
+//     isDragging = false;
+// });
 
-window.addEventListener('touchmove', (event) => {
+// window.addEventListener('touchmove', (event) => {
 
-    const deltaX = event.clientX - previousMousePosition.x;
-    const deltaY = event.clientY - previousMousePosition.y;
+//     const deltaX = event.clientX - previousMousePosition.x;
+//     const deltaY = event.clientY - previousMousePosition.y;
 
-    if (!isDragging || !model) return;
-    if (model) {
-
-
-        model.rotation.y += deltaX * 0.01; // Horizontal drag rotates around Y-axis
-        model.rotation.x += deltaY * 0.01; // Vertical drag rotates around X-axis
-
-        previousMousePosition.x = event.clientX;
-        previousMousePosition.y = event.clientY;
-
-    }
-    if (model2) {
+//     if (!isDragging || !model) return;
+//     if (model) {
 
 
-        model2.rotation.y += deltaX * 0.01; // Horizontal drag rotates around Y-axis
-        model2.rotation.x += deltaY * 0.01; // Vertical drag rotates around X-axis
+//         model.rotation.y += deltaX * 0.01; // Horizontal drag rotates around Y-axis
+//         model.rotation.x += deltaY * 0.01; // Vertical drag rotates around X-axis
 
-        previousMousePosition.x = event.clientX;
-        previousMousePosition.y = event.clientY;
+//         previousMousePosition.x = event.clientX;
+//         previousMousePosition.y = event.clientY;
 
-    }
-    else if (!isDragging || !model2) return
+//     }
+//     if (model2) {
+
+
+//         model2.rotation.y += deltaX * 0.01; // Horizontal drag rotates around Y-axis
+//         model2.rotation.x += deltaY * 0.01; // Vertical drag rotates around X-axis
+
+//         previousMousePosition.x = event.clientX;
+//         previousMousePosition.y = event.clientY;
+
+//     }
+//     else if (!isDragging || !model2) return
 
 
 
-});
+// });
 
 
 window.addEventListener('keydown', (event) => {
