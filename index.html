@@ -130,6 +130,8 @@
                     <div class="active-slide-dot"></div>
                     <div class="slide-dot"></div>
                     <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
                 </div>
             </div>
 
@@ -139,12 +141,38 @@
                     <div class="slide-dot"></div>
                     <div class="active-slide-dot"></div>
                     <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
                 </div>
             </div>
 
             <div class="lore-img-class" id="s3">
                 <img src="slide3.png" alt="Degen Spartan" class="lore-img">
                 <div class="slide-dots">
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="active-slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                </div>
+            </div>
+
+            <div class="lore-img-class" id="s4">
+                <img src="slide4.png" alt="Degen Spartan" class="lore-img">
+                <div class="slide-dots">
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
+                    <div class="active-slide-dot"></div>
+                    <div class="slide-dot"></div>
+                </div>
+            </div>
+
+            <div class="lore-img-class" id="s5">
+                <img src="slide5.png" alt="Degen Spartan" class="lore-img">
+                <div class="slide-dots">
+                    <div class="slide-dot"></div>
+                    <div class="slide-dot"></div>
                     <div class="slide-dot"></div>
                     <div class="slide-dot"></div>
                     <div class="active-slide-dot"></div>
@@ -226,7 +254,16 @@
                     <img src="m2.JPG" alt="Degen Spartan" class="model active" id="m2">
                     <img src="m1.JPG" alt="Degen Spartan" class="model inactive" id="m1">
                 </div>
+
+                <div class="models-selector2">
+                    <img src="Helmett.png" alt="Degen Spartan" class="model inactive" id="m3">
+                    <img src="Shield.png" alt="Degen Spartan" class="model inactive" id="m4">
+                    <img src="Sword.png" alt="Degen Spartan" class="model inactive" id="m5">
+                    <img src="Axe.png" alt="Degen Spartan" class="model inactive" id="m6">
+                </div>
+
             </div>
+            
         </section>
     </div>
     <script type="module" src="/main.js"></script>
@@ -258,7 +295,7 @@
 
         <div class="highlight-container">
             <div>
-                <p class="highlight-head">Current Portfolio Highlights</p>
+                <p class="highlight-head">Current Portfolio Highlights <img src="coins.png" alt="Degen Spartan" class="coins"> </p>
                 <p class="live">(Live updates pulled from on-chain data)</p>
             </div>
             <div class="highlight-sections">
@@ -338,6 +375,8 @@
     const s1 = document.getElementById('s1');
     const s2 = document.getElementById('s2');
     const s3 = document.getElementById('s3');
+    const s4 = document.getElementById('s4');
+    const s5 = document.getElementById('s5');
 
     const baseBal = document.getElementById('base-bal');
     const usdcBal = document.getElementById('usdc-bal');
@@ -444,23 +483,49 @@
     let s_num = 1
     setInterval(() => {
 
-        if (s_num !== 3) {
+        if (s_num !== 5) {
             let num = s_num += 1
             if (num === 1) {
                 s1.style.display = "flex"
                 s2.style.display = "none"
                 s3.style.display = "none"
+                s4.style.display = "none"
+                s5.style.display = "none"
             }
             if (num === 2) {
                 s1.style.display = "none"
                 s2.style.display = "flex"
                 s3.style.display = "none"
+                s4.style.display = "none"
+                s5.style.display = "none"
             }
             if (num === 3) {
                 s1.style.display = "none"
                 s2.style.display = "none"
                 s3.style.display = "flex"
+                s4.style.display = "none"
+                s5.style.display = "none"
+
+            }
+
+            if (num === 4) {
+                s1.style.display = "none"
+                s2.style.display = "none"
+                s3.style.display = "none"
+                s4.style.display = "flex"
+                s5.style.display = "none"
+
+            }
+
+            if (num === 5) {
+                s1.style.display = "none"
+                s2.style.display = "none"
+                s3.style.display = "none"
+                s4.style.display = "none"
+                s5.style.display = "flex"
+
                 s_num = 0
+
             }
         }
 

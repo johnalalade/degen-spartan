@@ -3,14 +3,19 @@ body {
     background-color: #000000;
     color: #fff;
     font-family: 'Montserrat';
+    margin-top: 110px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 100px;
+    position: fixed;
+    width: 90vw;
+    z-index: 99;
+    top: 0;
 }
 
 .navbar .logo {
@@ -356,40 +361,41 @@ body {
         align-items: center;
         background-color: #000000;
         padding: 5px 10px;
+        width: 95vw;
     }
-    
+
     .navbar .logo {
         color: white;
         font-size: 18px;
         font-weight: bold;
         text-decoration: none;
     }
-    
+
     .navbar .nav-links {
         list-style: none;
         display: flex;
     }
-    
+
     .navbar .nav-links li {
         margin: 0 8px;
     }
-    
+
     .links {
         width: 23px;
     }
-    
+
     .vr {
         border-left: 1px solid #CD7F32;
         padding-left: 16px;
     }
-    
+
     .navbar .nav-links a {
         color: white;
         text-decoration: none;
         font-size: 14px;
         transition: color 0.3s ease;
     }
-    
+
     .navbar .nav-links a:hover {
         color: #00bcd4;
     }

@@ -4,6 +4,7 @@ body {
     color: #fff;
     max-width: 100vw;
     font-family: 'Montserrat';
+    margin-top: 110px;
 }
 
 
@@ -11,8 +12,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 100px;
+    position: fixed;
+    width: 90vw;
+    z-index: 99;
+    top: 0;
 }
 
 .navbar .logo {
@@ -250,9 +255,20 @@ body {
     align-items: center;
 }
 
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .lore-img {
     height: 603px;
     width: 474px;
+    animation: slideIn 1s ease-in-out;
 }
 
 #s2 {
@@ -263,6 +279,13 @@ body {
     display: none;
 }
 
+#s4 {
+    display: none;
+}
+
+#s5 {
+    display: none;
+}
 
 .slide-dots {
     display: flex;
@@ -396,7 +419,7 @@ body {
 
 .model-menu {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
-    height: 331px;
+    height: 631px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -405,6 +428,7 @@ body {
     position: absolute;
     right: 150px;
     border-radius: 12px;
+    border: 0.5px solid rgba(255, 171, 61, 0.4);
 }
 
 .model-move {
@@ -412,8 +436,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
-    height: 50%;
+    /* flex: 1; */
+    height: 15%;
     padding: 2px 4px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 12px;
@@ -425,8 +449,8 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
-    height: 50%;
+    /* flex: 1; */
+    height: 15%;
     padding: 2px 4px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 12px;
@@ -438,15 +462,27 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
-    height: 50%;
+    /* flex: 1; */
+    height: 20%;
+    padding: 2px 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 12px;
+}
+
+.models-selector2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* flex: 1; */
+    height: 35%;
     padding: 2px 4px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 12px;
 }
 
 .action-btn {
-    width: 32px;
+    width: 28px;
 }
 
 .model {
@@ -455,6 +491,11 @@ body {
 }
 
 .models-selector .active {
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+}
+
+.models-selector2 .active {
     border: 2px solid #00bcd4;
     border-radius: 5px;
 }
@@ -533,6 +574,12 @@ body {
     font-family: 'Cinzel';
     font-size: 24px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.coins {
+    width: 70px;
 }
 
 .highlight-sections {
@@ -700,6 +747,7 @@ body {
         align-items: center;
         background-color: #000000;
         padding: 5px 10px;
+        width: 95vw;
     }
 
     .navbar .logo {
@@ -1056,25 +1104,44 @@ body {
         font-size: 12px;
         font-weight: 700;
         position: absolute;
-        bottom: 90px;
-        left: 110px;
+        bottom: 95px;
+        left: 90px;
     }
 
     .model-menu {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
-        height: 301px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        width: 30px;
+        width: 100px;
         position: absolute;
         right: 240px;
         transform: scaleX(-1) rotate(90deg);
-        bottom: -120px;
-        left: 140px;
+        bottom: -100px;
+        left: 120px;
         padding: 8px 2px;
         border-radius: 12px;
+        flex-wrap: wrap;
+        height: 290px;
+    }
+
+    .model-zoom {
+        height: 30%;
+    }
+
+    .model-move {
+        height: 30%;
+    }
+
+    .models-selector {
+        height: 30%;
+    }
+
+
+    .models-selector2 {
+
+        height: 180px;
     }
 
     .action-btn {
@@ -1162,6 +1229,10 @@ body {
         font-family: 'Cinzel';
         font-size: 16px;
         font-weight: 700;
+    }
+
+    .coins {
+        width: 28px;
     }
 
     .live {
