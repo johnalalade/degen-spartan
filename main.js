@@ -28,28 +28,12 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth / 1.3, window.innerHeight / 1.3);
-// renderer.setSize(modelHousing.clientWidth, modelHousing.clientHeight);
+
 renderer.setAnimationLoop(animate);
 
-// document.body.appendChild(renderer.domElement);
 modelHousing.appendChild(renderer.domElement)
 
-// const IMGloader = new THREE.TextureLoader();
-// IMGloader.load('grid.png', (texture) => {
-//   scene.background = texture; // Set the image as the background
-// });
 
-// const textureLoader = new THREE.TextureLoader();
-// const backgroundTexture = textureLoader.load('grid.png');
-
-// // Create a plane for the background
-// const planeGeometry = new THREE.PlaneGeometry(50, 15); // Adjust size
-// const planeMaterial = new THREE.MeshBasicMaterial({ map: backgroundTexture });
-// const backgroundPlane = new THREE.Mesh(planeGeometry, planeMaterial);
-
-// // Position the plane behind the scene
-// backgroundPlane.position.z = -5; // Move it far back
-// scene.add(backgroundPlane);
 
 camera.position.z = 5;
 
@@ -576,13 +560,7 @@ m6.onclick = function () {
 }
 
 
-// vertical.onclick = function () {
-//     if (activeScene === scene) {
-//         model.rotation.x -= 0.1;
-//     } else {
-//         model2.rotation.x -= 0.1;
-//     }
-// }
+
 let verticalIntervalId;
 vertical.addEventListener("mousedown", () => {
     verticalIntervalId = setInterval(function () {
@@ -631,13 +609,6 @@ vertical.addEventListener("touchcancel", () => {
     clearInterval(verticalIntervalId);
 });
 
-// horizontal.onclick = function () {
-//     if (activeScene === scene) {
-//         model.rotation.y -= 0.1;
-//     } else {
-//         model2.rotation.y -= 0.1;
-//     }
-// }
 
 let horizontalIntervalId;
 horizontal.addEventListener("mousedown", () => {
@@ -690,10 +661,7 @@ horizontal.addEventListener("touchcancel", () => {
 
 let fovSpeed = 1;
 
-// zoomIn.onclick = function () {
-//     camera.position.z -= zoomSpeed;
-//     camera.fov = Math.max(10, camera.fov - fovSpeed) // Reduce FOV for more zoom effect
-// }
+
 let zoomInIntervalId;
 zoomIn.addEventListener("mousedown", () => {
     zoomInIntervalId = setInterval(function () {
@@ -724,10 +692,6 @@ zoomIn.addEventListener("touchcancel", () => {
 });
 
 
-// zoomOut.onclick = function () {
-//     camera.position.z += zoomSpeed;
-//     camera.fov = Math.min(75, camera.fov + fovSpeed); // Increase FOV for less zoom effect
-// }
 
 let zoomOutIntervalId;
 
@@ -769,10 +733,6 @@ window.addEventListener('keydown', (event) => {
 
 // Animation
 function animate() {
-    // requestAnimationFrame(animate);
-
-    // cube.rotation.x += 0.01;
-    // cube.rotation.y += 0.01;
 
     if (mixer) {
         mixer.update(0.01); // Update the animations
@@ -780,28 +740,6 @@ function animate() {
 
     raycaster.setFromCamera(mouse, camera);
 
-    // if (model) {
-    //     // Update the raycaster based on the mouse position
-    //     raycaster.setFromCamera(mouse, camera);
-
-    //     // Find intersection point with the plane
-    //     // if (raycaster.ray.intersectPlane(plane, intersectionPoint)) {
-    //     //     // Smoothly move the model towards the intersection point
-    //     //     model.position.x += (intersectionPoint.x - model.position.x) * 0.1;
-    //     //     model.position.y += (intersectionPoint.y - model.position.y) * 0.1;
-    //     // }
-    // }
-    // if (model2) {
-    //     // Update the raycaster based on the mouse position
-    //     raycaster.setFromCamera(mouse, camera);
-
-    //     // Find intersection point with the plane
-    //     // if (raycaster.ray.intersectPlane(plane, intersectionPoint)) {
-    //     //     // Smoothly move the model towards the intersection point
-    //     //     model2.position.x += (intersectionPoint.x - model2.position.x) * 0.1;
-    //     //     model2.position.y += (intersectionPoint.y - model2.position.y) * 0.1;
-    //     // }
-    // }
 
     renderer.render(activeScene, camera);
 
