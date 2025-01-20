@@ -67,8 +67,9 @@ body {
 
 /* Hero */
 .about-hero {
-    min-height: 35vh;
-    background-image: url(/Marble1.png);
+    min-height: 70vh;
+    background-image: url(/about1.png);
+    background-position: cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -148,7 +149,7 @@ body {
 
 .vison-board {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: start;
     overflow: hidden;
 }
@@ -158,6 +159,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-right: -155px;
 }
 
 .wh-qu .why {
@@ -200,6 +202,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-left: -155px;
 }
 
 .mission {
@@ -273,19 +276,24 @@ body {
 }
 
 .contributor-item {
+    margin-bottom: 35px;
     display: flex;
     flex-direction: column;
     align-items: start;
+    /* justify-items: center; */
 }
 
 .contributor-name {
     font-family: 'Cinzel';
     font-size: 18px;
+    margin-bottom: 1px;
+    /* margin-left: 14px; */
 }
 
 .contributor-data {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .contributor-img {
@@ -295,6 +303,7 @@ body {
 .contributor-text {
     width: 170px;
     font-size: 14px;
+    margin-left: 12px;
 }
 
 /* Footer */
@@ -355,6 +364,10 @@ body {
 
 @media (max-width: 768px) {
 
+    body{
+        margin-right: 0;
+    }
+
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -402,31 +415,36 @@ body {
 
     /* Hero */
     .about-hero {
-        min-height: 35vh;
-        background-image: url(/Marble1.png);
+        /* max-height: 75vh; */
+        background-image: url(/about1.png);
+        background-position: -100px 0px;
+        background-size: 800px auto;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: center;
     }
 
     .about-hero-head {
         padding-left: 100px;
+        margin-left: -80px;
+        margin-top: -180px;
     }
 
     .about-hero-head h1 {
         font-family: 'Cinzel';
         font-weight: 700;
-        font-size: 44px;
+        font-size: 32px;
     }
 
     .about-hero-head p {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: -20px;
     }
 
     .about-hero .about-img {
-        width: 400px;
+        width: 390px;
     }
 
     /* Legend */
@@ -435,7 +453,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 64px;
+        margin-top: -180px;
     }
 
     .legend-name-img {
@@ -455,7 +473,7 @@ body {
     }
 
     .legend .legend-img {
-        width: 400px;
+        width: 390px;
     }
 
     .legend .legend-about {
@@ -601,6 +619,14 @@ body {
         margin-top: -10px;
     }
 
+    .rebuild2-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
     .rebuild2 {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
         padding: 5px 12px;
@@ -635,6 +661,8 @@ body {
         flex-direction: column;
         align-items: start;
         justify-content: center;
+        padding-left: 35px;
+        padding-right: 20px;
     }
 
     .contributors-head {
@@ -647,7 +675,7 @@ body {
         text-align: start;
         font-size: 18px;
         font-weight: lighter;
-        width: 400px;
+        width: 340px;
         margin-top: -20px;
     }
 
