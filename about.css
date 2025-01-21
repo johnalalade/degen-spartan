@@ -368,7 +368,7 @@ body {
 
     body {
         margin-right: 0;
-        margin-top: 20px;
+        margin-top: -70px;
     }
 
     .navbar {
@@ -433,7 +433,7 @@ body {
     .about-hero-head {
         padding-left: 100px;
         margin-left: -80px;
-        margin-top: -480px;
+        margin-top: -370px;
     }
 
     .about-hero-head h1 {
