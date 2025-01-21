@@ -72,6 +72,8 @@ body {
     background-position: cover;
     display: flex;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: space-between;
 }
 
@@ -364,8 +366,9 @@ body {
 
 @media (max-width: 768px) {
 
-    body{
+    body {
         margin-right: 0;
+        margin-top: -50px;
     }
 
     .navbar {
@@ -415,21 +418,22 @@ body {
 
     /* Hero */
     .about-hero {
-        /* max-height: 75vh; */
-        background-image: url(/about1.png);
-        background-position: -100px 0px;
-        background-size: 800px auto;
+        height: 100vh;
+        background-image: url(/a-p.jpeg);
+        background-position: cover;
+        background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        margin-bottom: 190px;
     }
 
     .about-hero-head {
         padding-left: 100px;
         margin-left: -80px;
-        margin-top: -180px;
+        margin-top: -480px;
     }
 
     .about-hero-head h1 {
@@ -465,11 +469,11 @@ body {
 
     .legend .legend-name {
         font-family: 'Cinzel';
-        font-weight: 500;
+        font-weight: 700;
         width: 400px;
 
         text-align: center;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .legend .legend-img {
@@ -619,7 +623,7 @@ body {
         margin-top: -10px;
     }
 
-    .rebuild2-container{
+    .rebuild2-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -690,13 +694,13 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .contributor-name {
         font-family: 'Cinzel';
         font-size: 14px;
-        margin-bottom: -6px;
+        margin-bottom: 2px;
     }
 
     .contributor-data {
@@ -713,7 +717,7 @@ body {
         width: 170px;
         font-size: 10px;
         text-align: center;
-        margin-top: -15px;
+        margin-top: 2px;
     }
 
 
