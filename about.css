@@ -362,8 +362,6 @@ body {
 }
 
 
-/* ---- Mobiles ---- */
-
 
 @media (max-width: 1024px) {
 
@@ -769,6 +767,7 @@ body {
 }
 
 
+/* ---- Mobiles ---- */
 @media (max-width: 768px) {
 
     body {
